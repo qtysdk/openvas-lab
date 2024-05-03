@@ -13,16 +13,18 @@ packages:
   - docker-ce-cli
   - containerd.io
   - docker-compose-plugin
+  - git
 
 groups:
   - docker
 
 users:
   - default
-  - name: ubuntu
+  - name: qrtt1
     groups: [docker]
 
 runcmd:
   - systemctl enable docker
   - systemctl start docker
-
+  - |
+    sudo -u qrtt1 git clone https://github.com/qtysdk/openvas-lab.git /home/qrtt1/openvas-lab
