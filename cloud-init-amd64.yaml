@@ -22,9 +22,15 @@ users:
   - default
   - name: qrtt1
     groups: [docker]
+    shell: /usr/bin/bash
 
 runcmd:
   - systemctl enable docker
   - systemctl start docker
+  - usermod -u qrtt1 -aG docker qrtt1
   - |
+    sudo sh -c 'echo "alias g=git" >> /home/qrtt1/.bashrc'
+    sudo -u qrtt1 git config --global user.name "cloud-lab"
+    sudo -u qrtt1 git config --global user.email "cloud-lab@qrtt1.io"
     sudo -u qrtt1 git clone https://github.com/qtysdk/openvas-lab.git /home/qrtt1/openvas-lab
+
