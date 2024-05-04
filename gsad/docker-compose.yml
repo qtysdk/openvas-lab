@@ -93,7 +93,7 @@ services:
     volumes:
       - gvmd_socket_vol:/run/gvmd
       - /tmp/gsad:/usr/local/sbin/gsad
-      - /tmp/gsad/gsad_log.conf:/etc/gvm/gsad_log.conf
+      - /tmp/gsad_log.conf:/etc/gvm/gsad_log.conf
     depends_on:
       - gvmd
   # Sets log level of openvas to the set LOG_LEVEL within the env

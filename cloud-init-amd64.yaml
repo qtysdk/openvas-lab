@@ -38,8 +38,8 @@ runcmd:
   - systemctl enable docker
   - systemctl start docker
   - usermod -u qrtt1 -aG docker qrtt1
+  - sudo sh -c 'echo "alias g=git" >> /home/qrtt1/.bashrc'
   - |
-    sudo sh -c 'echo "alias g=git" >> /home/qrtt1/.bashrc'
     sudo -u qrtt1 git config --global user.name "cloud-lab"
     sudo -u qrtt1 git config --global user.email "cloud-lab@qrtt1.io"
 
