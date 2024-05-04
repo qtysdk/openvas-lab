@@ -3,6 +3,7 @@
 gcloud compute instances create example-instance \
          --image-family ubuntu-2204-lts \
          --image-project ubuntu-os-cloud \
+         --machine-type n1-standard-2 \
          --zone asia-east1-a \
          --boot-disk-size 64GB \
          --tags=http-server,https-server \

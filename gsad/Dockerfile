@@ -1,2 +1,0 @@
-FROM greenbone/gsa:stable
-
