@@ -44,5 +44,5 @@ runcmd:
     sudo -u qrtt1 git config --global user.email "cloud-lab@qrtt1.io"
 
     sudo -u qrtt1 git clone https://github.com/qtysdk/openvas-lab.git /home/qrtt1/openvas-lab
-    sudo -u git clone --branch v22.8.0 https://github.com/greenbone/gsad.git
+    sudo -u qrtt1 git clone --depth 1 --branch v22.8.0 https://github.com/greenbone/gsad.git
   - systemctl reload nginx
